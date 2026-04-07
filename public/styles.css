@@ -6,6 +6,11 @@
     --line: #eee;
 }
 
+html,
+body{
+    height: 100%;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -15,12 +20,19 @@ body {
     font: 16px/1.5 system-ui, sans-serif;
     color: var(--ink);
     background: var(--bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .wrap {
     max-width: 980px;
     margin: 0 auto;
     padding: 0 1rem;
+}
+
+main {
+    flex: 1;
 }
 
 .site-header,
@@ -33,6 +45,8 @@ body {
     border-top: 1px solid var(--line);
     border-bottom: none;
     margin-top: 2rem;
+    text-align: center;
+    padding: 1rem;
 }
 
 .site-header .brand {
