@@ -7,14 +7,14 @@
 <div class="cards">
   {{#courses}}
   <article class="card">
-    <h2>/courses/{{title}}</h2>
+    <h2>{{title}}</h2>
     <p class="muted">
       Level: {{level}} • Type: {{type}} {{#allowDropIn}}• Drop-in OK{{/allowDropIn}}
     </p>
     <p>{{description}}</p>
     <p class="muted">Dates: {{startDate}}  {{endDate}}</p>
     <p class="muted">Next session: {{nextSession}} • Sessions: {{sessionsCount}}</p>
-    <a class = "btn" href = "/courses/{{_id}}"> View &amp; Book</a>
+    <a class = "btn" href = "/courses/{{id}}"> View &amp; Book</a>
   </article>
   {{/courses}}
 
