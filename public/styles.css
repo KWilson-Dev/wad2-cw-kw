@@ -44,9 +44,7 @@ main {
 .site-footer {
     border-top: 1px solid var(--line);
     border-bottom: none;
-    margin-top: 2rem;
     text-align: center;
-    padding: 1rem;
 }
 
 .site-header .brand {
