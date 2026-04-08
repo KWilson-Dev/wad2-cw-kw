@@ -105,7 +105,7 @@ app.use(cookieParser());
 app.use("/static", express.static(path.join(__dirname, "public")));
 
 // Demo user
-app.use(attachDemoUser);
+//app.use(attachDemoUser);
 
 // Health
 app.get("api/health", (req, res) => res.json({ ok: true }));
