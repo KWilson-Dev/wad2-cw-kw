@@ -73,7 +73,7 @@ import mustacheExpress from "mustache-express";
 import path from "path";
 import { fileURLToPath } from "url";
 import session from "express-session";
-import passport from ".auth/passport.js";
+import passport from "./auth/passport.js";
 
 import authRoutes from './routes/auth.js';
 import courseRoutes from "./routes/courses.js";
