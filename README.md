@@ -18,5 +18,5 @@ cd wad2-cw-kw
    Node index
 
    Username and password for example user:
-   fiona@student.local
-   password123
+   Username: fiona@student.local
+    Password: password123
