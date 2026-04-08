@@ -9,6 +9,7 @@ import {
 import { CourseModel } from "../models/courseModel.js";
 import { SessionModel } from "../models/sessionModel.js";
 import { UserModel } from "../models/userModel.js";
+import argon2 from "argon2";
 
 const iso = (d) => new Date(d).toISOString();
 
@@ -36,7 +37,7 @@ async function ensureDemoStudent() {
       name: "Fiona",
       email: "fiona@student.local",
       role: "student",
-      passwordhash: "password123"
+      passwordHash: await argon2.hash ("password123")
     });
   }
   return student;
@@ -47,7 +48,7 @@ async function createWeekendWorkshop() {
     name: "Ava",
     email: "ava@yoga.local",
     role: "instructor",
-    passwordhash: "Password123"
+    passwordHash: await argon2.hash("Password123")
   });
   const course = await CourseModel.create({
     title: "Winter Mindfulness Workshop",
@@ -86,7 +87,7 @@ async function createWeeklyBlock() {
     name: "Ben",
     email: "ben@yoga.local",
     role: "instructor",
-    passwordhash: "password123"
+    passwordHash: await argon2.hash("password123")
   });
   const course = await CourseModel.create({
     title: "12‑Week Vinyasa Flow",

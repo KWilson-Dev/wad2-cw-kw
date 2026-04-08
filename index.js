@@ -72,13 +72,15 @@ import dotenv from "dotenv";
 import mustacheExpress from "mustache-express";
 import path from "path";
 import { fileURLToPath } from "url";
+import session from "express-session";
+import passport from ".auth/passport.js";
 
 // import authRoutes from './routes/auth.js';
 import courseRoutes from "./routes/courses.js";
 import sessionRoutes from "./routes/sessions.js";
 import bookingRoutes from "./routes/bookings.js";
 import viewRoutes from "./routes/views.js";
-import { attachDemoUser } from "./middlewares/demoUser.js";
+// import { attachDemoUser } from "./middlewares/demoUser.js";
 import { initDb } from "./models/_db.js";
 
 dotenv.config();
@@ -95,6 +97,21 @@ app.engine(
 );
 app.set("view engine", "mustache");
 app.set("views", path.join(__dirname, "views"));
+
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET || "totally_secret",
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      httpOnly: true,
+      secure: false // Used in local development, may change
+    }
+  })
+);
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Body parsing
 app.use(express.urlencoded({ extended: false }));
