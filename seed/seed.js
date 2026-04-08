@@ -36,6 +36,7 @@ async function ensureDemoStudent() {
       name: "Fiona",
       email: "fiona@student.local",
       role: "student",
+      passwordhash: "password123"
     });
   }
   return student;
@@ -46,6 +47,7 @@ async function createWeekendWorkshop() {
     name: "Ava",
     email: "ava@yoga.local",
     role: "instructor",
+    passwordhash: "Password123"
   });
   const course = await CourseModel.create({
     title: "Winter Mindfulness Workshop",
@@ -84,6 +86,7 @@ async function createWeeklyBlock() {
     name: "Ben",
     email: "ben@yoga.local",
     role: "instructor",
+    passwordhash: "password123"
   });
   const course = await CourseModel.create({
     title: "12‑Week Vinyasa Flow",
