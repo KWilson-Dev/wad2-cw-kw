@@ -37,7 +37,7 @@ async function ensureDemoStudent() {
       name: "Fiona",
       email: "fiona@student.local",
       role: "student",
-      passwordHash: await argon2.hash ("password123")
+      passwordHash: await argon2.hash("password123")
     });
   }
   return student;

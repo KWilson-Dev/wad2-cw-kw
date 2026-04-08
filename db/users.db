@@ -1,5 +1,6 @@
-{"name":"Ava","email":"ava@yoga.local","role":"instructor","passwordHash":"$argon2id$v=19$m=65536,t=3,p=4$r80hLyv6pKhbZSrXGgiUMw$iTtmrpCInUHZEaJO9ZswvTX0/SNNSZEbBC+ydXeqSFs","_id":"NNtsPVo5NuCCLsdq"}
-{"name":"Ben","email":"ben@yoga.local","role":"instructor","passwordHash":"$argon2id$v=19$m=65536,t=3,p=4$4GiKxwE43Go9A67P00XV/A$K3gUHxMGl7nqh3HwUi8Xpv+9JQ6TMTarZYF47D5vgbk","_id":"Qa3YluNoDkony0Bz"}
-{"name":"Fiona","email":"fiona@student.local","role":"student","passwordHash":"$argon2id$v=19$m=65536,t=3,p=4$C0qc52LYYSi2akhq9n88rA$DCdbRqRbmCdumrkvk/dtX3V2XIOXJWBOIxM//XtSq7Q","_id":"oRLgo0uGVtfm7kn5"}
+{"name":"Ava","email":"ava@yoga.local","role":"instructor","passwordHash":"$argon2id$v=19$m=65536,t=3,p=4$DHF/qib+SAZNYJ6GYNFJ2g$QqD6lRrKXdsyiQkkmlCd2jxwxrASSgtWjVDup7tU7MM","_id":"38eIFiOiBosgzC2q"}
+{"name":"Ben","email":"ben@yoga.local","role":"instructor","passwordHash":"$argon2id$v=19$m=65536,t=3,p=4$PJ36UxzfV1N/NhJZVSlNdQ$bJWCTfjOdY+bMFUuQ0dNna5BsWIZ0L1G4kXzMKA/D2U","_id":"dl5VJNavZ81GviJ2"}
+{"name":"John","email":"john@student.local","role":"student","passwordHash":"$argon2id$v=19$m=65536,t=3,p=4$is0XBcfp9hgiMbgltlvDng$5+d7C3MBuxhOQXHIxu7Flb8QDPCIIun7+24+LXFHW94","_id":"fEBZ2QsCKK93tCEZ"}
+{"name":"Sam","email":"sam@student.local","role":"student","passwordHash":"$argon2id$v=19$m=65536,t=3,p=4$PIGJwCDz5OCh7bADS7yAWA$84zxduFqDJk/jqo8HDUqKlj5C90KN06aIHvMFDP1hTk","_id":"hhYdXGjBNZBpDJ7A"}
+{"name":"Fiona","email":"fiona@student.local","role":"student","passwordHash":"$argon2id$v=19$m=65536,t=3,p=4$7GYzi3g5T7giy4zTzrevFA$ohs9WP7XG5eLTjDb+f9ffDNqzj1476Hk1VXxAP9rxeE","_id":"t6drrQoHzNi8TrDp"}
 {"$$indexCreated":{"fieldName":"email","unique":true,"sparse":false}}
-{"$$indexCreated":{"fieldName":"email","unique":true}}

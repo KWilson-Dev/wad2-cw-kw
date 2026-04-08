@@ -45,16 +45,20 @@ router.post("/register", async (req, res) => {
 });
 
 router.post(
-    "/login", 
+    "/login", (req, res, next) => {
+    console.log("LOGIN BODY:", req.body);
+    next();
+    },
     passport.authenticate ("local", {
         failureRedirect: "/login"
     }),
     (req,res) => {
+         console.log("LOGIN SUCCESS:", req.user);
          res.redirect("/")
     }     
 );
 
-router.post("/logout", (res, req, next) => {
+router.post("/logout", (req, res, next) => {
     req.logout((err) => {
     if (err) return next(err);
     req.session.destroy(() => {

@@ -11,9 +11,10 @@ passport.use(
             try{
                 const user = await UserModel.findByEmail(email)
                 if (!user) return done(null, false, {message: "User not found"})
-                
-                const userFound = await argon2.verify(user.paswordHash, password)
-                if (!userFound) return done(null, false, {message: "Invalid password"})
+
+                const ok = await argon2.verify(user.passwordHash, password)
+                console.log("Password match:", ok);
+                if (!ok) return done(null, false, {message: "Invalid password"})
 
                 return done (null, user)
             } catch(err) {
@@ -24,8 +25,8 @@ passport.use(
 )
 
 passport.serializeUser((user, done) => {
-    done(null,user._id)
-})
+  done(null, user._id);
+});
 
 passport.deserializeUser(async (id, done) => {
     try {
