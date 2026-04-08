@@ -1,0 +1,40 @@
+import passport from "passport";
+import { Strategy as LocalStrategy } from "passport-local";
+import argon2 from "argon2";
+import { UserModel } from "../models/userModel.js";
+
+
+passport.use(
+    new LocalStrategy(
+        {usernameField: "email", passwordField: "password" },
+        async (email, password, done) => {
+            try{
+                const user = await UserModel.findByEmail(email)
+                if (!user) return done(null, false, {message: "User not found"})
+
+                const ok = await argon2.verify(user.passwordHash, password)
+                console.log("Password match:", ok);
+                if (!ok) return done(null, false, {message: "Invalid password"})
+
+                return done (null, user)
+            } catch(err) {
+                return done(err)
+            }
+        }
+    )
+)
+
+passport.serializeUser((user, done) => {
+  done(null, user._id);
+});
+
+passport.deserializeUser(async (id, done) => {
+    try {
+        const user = await UserModel.findById(id);
+        done (null,user || false)
+    } catch(err) {
+        done(err)
+    }
+});
+
+export default passport

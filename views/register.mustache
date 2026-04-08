@@ -1,0 +1,29 @@
+{{>head}}
+{{>header}}
+<main class="wrap">
+<h1> Register <h1>
+
+<form method= "post" action ="/register" class ="card">
+<p>
+    <label for ="name">Name:</label><br>
+    <input id="name" type="name" name="name" required>
+<p>
+
+<p>
+    <label for ="email">Email:</label><br>
+    <input id="email" type="email" name="email" required>
+<p>
+
+<p>
+    <label for ="password">Password:</label><br>
+    <input id="password" type="password" name="password" required>
+<p>
+
+<p>
+    <button class="btn primary" type="submit">Register</button>
+<p>
+</form>
+
+<p>Already have an account? <a href="/login">Login</a></p>
+
+{{>footer}}

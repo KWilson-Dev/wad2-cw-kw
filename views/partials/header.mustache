@@ -1,14 +1,17 @@
 <header class="site-header">
   <div class="wrap">
-    🧘 Yoga Studio
+    <a href = "/">🧘 Yoga Studio </a>
     <nav>
     {{^user}}
       <a href = "/courses">Courses</a>
-      <a>Login/Register</a> 
+      <a href = "/login">Login</a>
+      <a href = "/register">Register</a> 
     {{/user}}
     {{#user}}
     <a href = "/courses">Courses</a>
-    <a>Log out</a>
+    <form method="post" action="/logout" style="display:inline;">
+     <button class="btn" type="submit">Log out</button> 
+     </form>
     {{/user}}
     </nav>
     {{#user}}
